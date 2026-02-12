@@ -25,7 +25,7 @@ export default {
     };
   },
   async mounted() {
-    // Cargar estudiantes al montar el componente
+  
     await this.cargarEstudiantes();
   },
   methods: {
@@ -39,7 +39,7 @@ export default {
       }
     },
     async actualizarTabla() {
-      // Recargar la lista después de guardar un estudiante
+      
       await this.cargarEstudiantes();
     },
     manejarEstudianteSeleccionado(data) {
@@ -47,14 +47,10 @@ export default {
       console.log("Estudiante seleccionado:", estudiante);
       console.log("Enlace HATEOAS:", enlace);
 
-      // Aquí puedes implementar la lógica para:
-      // 1. Mostrar un modal con detalles del estudiante
-      // 2. Navegar a una página de detalle
-      // 3. Hacer una petición al enlace HATEOAS para obtener más info
+     
 
       if (enlace) {
-        // Ejemplo: podrías hacer una petición GET al enlace
-        // this.obtenerDetalleEstudiante(enlace);
+       
         console.log(`Podrías hacer GET a: ${enlace}`);
       }
     },
